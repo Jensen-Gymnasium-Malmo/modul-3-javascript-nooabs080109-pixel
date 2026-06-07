@@ -4,13 +4,37 @@ T.ex. hur man loopar eller gör if-satser i JS
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
     <title>Uppgift 8: Onward</title>
-  </head>
-  <body></body>
+</head>
 
-  <script></script>
+<body>
+
+<h2>JavaScript Loop & If-test</h2>
+
+<p id="output"></p>
+
+<script>
+
+let output = document.getElementById("output");
+
+let text = "";
+
+// LOOP från 1 till 10
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        text += i + " är jämnt tal<br>";
+    } else {
+        text += i + " är udda tal<br>";
+    }
+}
+
+output.innerHTML = text;
+
+</script>
+
+</body>
 </html>
