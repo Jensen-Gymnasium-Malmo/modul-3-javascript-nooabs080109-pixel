@@ -1,55 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uppgift 3: Change content</title>
-    <style>
-      .recipe {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <button onclick="showCarbonara()">Show carbonara ingredients</button>
-    <button onclick="showPizza()">Show pizza ingredients</button>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Uppgift 3: Change content</title>
+  <style>
+    .recipe {
+      display: none;
+    }
+  </style>
+</head>
 
-    <div id="ingredients"></div>
+<body>
 
-    <script>
-      function showCarbonara() {
-        const ingredientsDiv = document.getElementById("ingredients");
-        ingredientsDiv.innerHTML = `
-          <h2>Carbonara Ingredients</h2>
-          <ul>
-            <li>Spaghetti</li>
-            <li>Eggs</li>
-            <li>Pancetta</li>
-            <li>Parmesan cheese</li>
-            <li>Black pepper</li>
-          </ul>
-        `;
-      }
+<button onclick="showCarbonara()">Carbonara</button>
+<button onclick="showPizza()">Pizza</button>
 
-      function showPizza() {
-        const ingredientsDiv = document.getElementById("ingredients");
-        ingredientsDiv.innerHTML = `
-          <h2>Pizza Ingredients</h2>
-          <ul>
-            <li>Flour</li>
-            <li>Tomato sauce</li>
-            <li>Mozzarella cheese</li>
-            <li>Pepperoni</li>
-            <li>Mushrooms</li>
-          </ul>
-        `;
-      }
+<div id="ingredients"></div>
 
-      if (window.location.hash === "#carbonara") {
-        showCarbonara();
-      } else if (window.location.hash === "#pizza") {
-        showPizza();
-      }
-    </script>
-  </body> 
+<script>
+function showCarbonara() {
+  document.getElementById("ingredients").innerHTML =
+    "<h2>Carbonara Ingredients</h2><ul><li>Spaghetti</li><li>Eggs</li><li>Pancetta</li><li>Parmesan</li><li>Black pepper</li></ul>";
+}
+
+function showPizza() {
+  document.getElementById("ingredients").innerHTML =
+    "<h2>Pizza Ingredients</h2><ul><li>Flour</li><li>Tomato sauce</li><li>Mozzarella</li><li>Pepperoni</li><li>Mushrooms</li></ul>";
+}
+</script>
+
+</body>
 </html>
